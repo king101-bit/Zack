@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, Mail, MapPin, Phone, MessageSquare } from "lucide-react";
+import { Send, Mail, MapPin, MessageSquare } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,18 +14,19 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState({ type: "", text: "" });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage({ type: "", text: "" });
 
     try {
-      // Send form data to Formspree
       const response = await fetch("https://formspree.io/f/xzzdaaoq", {
         method: "POST",
         headers: {
@@ -35,28 +36,24 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        // Reset form on success
         setFormData({
           name: "",
           email: "",
           subject: "",
           message: "",
         });
-
-        // Show success message
         setSubmitMessage({
           type: "success",
           text: "Thank you for your message. I'll get back to you soon!",
         });
       } else {
-        // Show error message
         setSubmitMessage({
           type: "error",
           text: "Something went wrong. Please try again.",
         });
       }
     } catch (error) {
-      // Show error message
+      console.error(error);
       setSubmitMessage({
         type: "error",
         text: "Something went wrong. Please try again.",

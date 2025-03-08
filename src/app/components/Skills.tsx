@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Code, Server, PenTool, Palette } from "lucide-react";
+import { Code, Server, PenTool } from "lucide-react";
 
 const skillCategories = [
   {
