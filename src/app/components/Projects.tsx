@@ -9,9 +9,9 @@ const projects = [
     description:
       "A full-featured e-commerce platform with product listings, cart functionality, and checkout process.",
     image: "/makye.png",
-    tags: ["React", "Next.js", "Tailwind CSS", "Stripe"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    tags: ["React", "Next.js", "Tailwind CSS", "Paystack"],
+    liveUrl: "https://makye.vercel.app/",
+    githubUrl: "https://github.com/king101-bit/MAKYE",
     featured: true,
   },
   {
@@ -20,9 +20,9 @@ const projects = [
     description:
       "A Real Estate Platform that helps users find properties, compare prices, and book tours.",
     image: "/phoenix.png",
-    tags: ["React", "TypeScript", "Redux", "Firebase"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    tags: ["React", "TypeScript", "Supabase"],
+    liveUrl: "https://phoenix-omega-five.vercel.app/",
+    githubUrl: "https://github.com/king101-bit/Phoenix",
     featured: true,
   },
   {
@@ -32,8 +32,8 @@ const projects = [
       "A LMS Platform that helps users learn new skills and improve their knowledge.",
     image: "/luna.png",
     tags: ["JavaScript", "API Integration", "CSS3", "Responsive Design"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    liveUrl: "https://luna-chi-black.vercel.app/",
+    githubUrl: "https://github.com/king101-bit/Luna",
     featured: true,
   },
   {
@@ -43,8 +43,8 @@ const projects = [
       "A personal portfolio website showcasing projects and skills with a modern design.",
     image: "/rezo.png",
     tags: ["Next.js", "Framer Motion", "Tailwind CSS", "Responsive Design"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    liveUrl: "https://rezon.vercel.app/",
+    githubUrl: "https://github.com/king101-bit/Rezon",
     featured: false,
   },
   {
@@ -53,18 +53,8 @@ const projects = [
     description: "A new year counter app.",
     image: "/year.png",
     tags: ["React Native", "Expo", "Firebase", "Health API"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "A Quiz app Landing page",
-    description: "A landing page for a quiz app.",
-    image: "/quiz.png",
-    tags: ["UI/UX", "Figma", "Component Library", "Design System"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    liveUrl: "https://new-year-counter-sigma.vercel.app/",
+    githubUrl: "https://github.com/king101-bit/New-year-counter",
     featured: false,
   },
 ];
@@ -150,7 +140,7 @@ export default function Projects() {
 
         <div className="text-center mt-12">
           <a
-            href="https://github.com"
+            href="https://github.com/king101-bit?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-medium rounded-lg transition-colors"
