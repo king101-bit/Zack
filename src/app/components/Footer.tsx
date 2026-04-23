@@ -43,7 +43,7 @@ export default function Footer() {
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="mailto:zackagba7@gmail.com"
+                href="mailto:kingbit101@proton.me"
                 aria-label="Email"
                 className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
               >
@@ -101,17 +101,12 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-gray-600 dark:text-gray-400">
-                Crossriver,Nigeria
-              </li>
-              <li>
-                <a
-                  href="mailto:contact@example.com"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
-                >
-                  Zackagba7@gmail.com
-                </a>
-              </li>
+              <a
+                href="mailto:contact@example.com"
+                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
+              >
+                kingbit101@proton.me{" "}
+              </a>
             </ul>
           </div>
         </div>

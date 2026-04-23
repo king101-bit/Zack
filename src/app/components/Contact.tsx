@@ -94,7 +94,7 @@ export default function Contact() {
                         href="mailto:zackagba7@gmail.com"
                         className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
                       >
-                        zackagba7@gmail.com
+                        kingbit101@proton.me{" "}
                       </a>
                     </div>
                   </div>

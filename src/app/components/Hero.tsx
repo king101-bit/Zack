@@ -52,7 +52,7 @@ export default function Hero() {
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="mailto:zackagba7@gmail.com"
+              href="mailto:kingbit101@proton.me"
               aria-label="Email"
               className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
             >
