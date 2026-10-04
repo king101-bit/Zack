@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+    --page: #efede7;
+    --card: #ffffff;
+    --fg: #111111;
+    --mut: #6b6b70;
+    --line: #e2dfd7;
+    --ink: #111111;
+    --inkfg: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --page: #0f0f11;
+        --card: #18181b;
+        --fg: #f4f4f2;
+        --mut: #9a9aa2;
+        --line: #27272b;
+        --ink: #f4f4f2;
+        --inkfg: #111111;
+    }
+}
+
+@theme inline {
+    --font-sans:
+        "Inter Tight Variable", "Inter Tight", system-ui, -apple-system,
+        "Helvetica Neue", Arial, sans-serif;
+
+    --color-page: var(--page);
+    --color-card: var(--card);
+    --color-fg: var(--fg);
+    --color-mut: var(--mut);
+    --color-line: var(--line);
+    --color-ink: var(--ink);
+    --color-inkfg: var(--inkfg);
+
+    --color-coral: #ff7a59;
+    --color-peach: #ffe0d3;
+    --color-lavender: #a79dff;
+    --color-lav-tint: #e1dcff;
+    --color-lime: #d8ff5a;
+    --color-lime-tint: #eaffb8;
+    --color-deep: #14123a; /* dark text on lavender */
+    --color-rust: #a8300f; /* small labels on tinted tiles */
+
+    --radius-tile: 28px;
+    --radius-panel: 26px;
+    --radius-block: 34px;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+    }
+    body {
+        background: var(--page);
+        color: var(--fg);
+        font-family: var(--font-sans);
+        font-size: 17px;
+        line-height: 1.55;
+        overflow-x: hidden;
+    }
+    h1,
+    h2,
+    h3 {
+        letter-spacing: -0.05em;
+        font-weight: 800;
+    }
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+        outline: 3px solid var(--color-lavender);
+        outline-offset: 3px;
+    }
+}
+
+@layer components {
+    .tile {
+        background: var(--card);
+        border-radius: var(--radius-tile);
+        padding: 30px;
+    }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 24px;
+        border-radius: 9999px;
+        border: 2px solid var(--ink);
+        font-weight: 600;
+        background: var(--ink);
+        color: var(--inkfg);
+        transition:
+            transform 0.15s,
+            box-shadow 0.15s;
+    }
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+    .btn-outline {
+        background: transparent;
+        color: var(--fg);
+        border-color: var(--fg);
+    }
+    .btn-sm {
+        padding: 9px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+}
