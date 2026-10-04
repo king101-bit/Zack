@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FACTS, VALUES, RIGHT_NOW, NOW_PLAYING } from "../data/about";
+import { FACTS, VALUES, RIGHT_NOW } from "../data/about";
 import SectionHeading from "./SectionHeading";
 
 const label = "mb-3 block text-xs font-extrabold uppercase tracking-[.1em]";

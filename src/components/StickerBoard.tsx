@@ -74,12 +74,6 @@ type Sticker = {
   content: ReactNode;
 };
 
-const glyph = (t: string) => (
-  <b className="font-extrabold leading-none" style={{ fontSize: "34cqw" }}>
-    {t}
-  </b>
-);
-
 const STICKERS: Sticker[] = [
   {
     x: 8,
@@ -105,9 +99,7 @@ const STICKERS: Sticker[] = [
     shape: "circle",
     bg: "bg-coral",
     label: "Aero B737!",
-    content: (
-      <img src="/stickers/2.jpg" alt="" className="size-full object-cover" />
-    ),
+    content: <Donut />,
   },
   {
     x: 36,
